@@ -1,0 +1,26 @@
+<p id="notice"></p>
+
+
+<div class="center">
+  <div class="pic">
+    <img src="http://8900-presscdn-0-84.pagely.netdna-cdn.com/wp-content/themes/beautycon/assets/img/avatar-grey.png" height="250">
+  </div>
+
+  <div class="info">
+
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+
+    <% if @user.admin %>
+      <p><strong>ADMIN</strong></p>
+    <% end %>
+    
+    <p><strong>Name:</strong> <%= @user.name %></p>
+    <p><strong>Tickets:</strong> <%= @user.tickets %></p>
+    <p><strong>Mood:</strong>  <%= @user.mood %></p>
+    <p><strong>Height:</strong> <%= @user.height %> inches</p>
+    <p><a href="/users/1217/edit">Edit</a></p>
+    <p><a href="/attractions">See attractions</a></p>
+  </div>
+</div>

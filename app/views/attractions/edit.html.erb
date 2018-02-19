@@ -1,0 +1,33 @@
+<h1>Edit attraction</h1>
+
+<%= form_for @attraction, :method => 'patch' do |f| %>
+
+  <div class="field">
+    <%= f.label :name, "Name" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :min_height, "Height Requirement (in inches)" %><br />
+    <%= f.text_field :min_height, :type => 'number' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :happiness_rating, "How fun is it? (1-5 scale)" %><br />
+    <%= f.text_field :happiness_rating, :type => 'number' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nausea_rating, "How nausea-inducing is it? (1-5 scale)" %><br />
+    <%= f.text_field :nausea_rating, :type => 'number' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tickets, "How many tickets does it cost?" %><br />
+    <%= f.text_field :tickets, :type => 'number' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update Attraction" %>
+  </div>
+<% end %>
